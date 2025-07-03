@@ -1,0 +1,96 @@
+🔁 1. for Loop (C-style / range-based)
+👉 Fixed Range:
+bash
+Copy
+Edit
+for i in {1..5}; do
+  echo "Number: $i"
+done
+📌 Loops from 1 to 5.
+
+👉 C-style Syntax:
+bash
+Copy
+Edit
+for ((i=1; i<=5; i++)); do
+  echo "Number: $i"
+done
+📌 Like in C/C++, with init; condition; increment.
+
+
+
+
+
+🔁 2. while Loop
+👉 Loops while a condition is true:
+bash
+Copy
+Edit
+i=1
+while [ $i -le 5 ]; do
+  echo "While Loop: $i"
+  ((i++))
+done
+
+
+
+🔁 3. until Loop
+👉 Loops until a condition becomes true:
+bash
+Copy
+Edit
+i=1
+until [ $i -gt 5 ]; do
+  echo "Until Loop: $i"
+  ((i++))
+done
+📌 Runs until i > 5 becomes true.
+
+
+
+
+
+🔁 4. for Loop with Arrays or Strings
+bash
+Copy
+Edit
+fruits=("apple" "banana" "cherry")
+
+for fruit in "${fruits[@]}"; do
+  echo "Fruit: $fruit"
+done
+Or with a list of strings:
+
+bash
+Copy
+Edit
+for name in Alice Bob Charlie; do
+  echo "Hello $name"
+done
+
+
+
+🔁 5. Infinite Loop (with while or for)
+⚠️ Use with care:
+bash
+Copy
+Edit
+while true; do
+  echo "This runs forever. Press Ctrl+C to stop."
+done
+Or:
+
+bash
+Copy
+Edit
+for (( ; ; )); do
+  echo "Infinite loop"
+done
+🧪 Summary Table
+Loop Type	Use Case
+for	Fixed range or iterating over items
+while	Run as long as condition is true
+until	Run until condition becomes true
+for-in	Iterate over strings, words, arrays
+Infinite loop	Background services, long-running checks
+
