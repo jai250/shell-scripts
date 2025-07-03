@@ -1,0 +1,4 @@
+Error	Cause	Fix
+fatal: no configured push destination	              You didn't set a remote	Use git remote add origin <url>
+rejected: non-fast-forward	                        Your local is behind remote	git pull --rebase origin main first
+403 or authentication failed	                      Wrong GitHub credentials	Use Personal Access Token instead of password
